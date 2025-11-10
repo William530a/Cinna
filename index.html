@@ -150,15 +150,17 @@ Te amo mi niña hermosa!
   <script>
     const btn = document.getElementById("btn");
     const mensaje = document.getElementById("mensaje");
-
+  
     btn.addEventListener("click", () => {
       mensaje.style.display = "block";
       setTimeout(() => {
         mensaje.style.opacity = "1";
-      }, 50);
+        mensaje.scrollIntoView({ behavior: "smooth" }); // ✨ baja suavemente hasta el texto
+      }, 100);
       btn.style.display = "none";
     });
   </script>
+
 
 </body>
 </html>
