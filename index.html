@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Liz 💙</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #c8f0ff, #fef6ff);
+      text-align: center;
+      color: #4b4b4b;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #5a8fdc;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 180px;
+      margin-bottom: 25px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    button {
+      background-color: #a7d9ff;
+      border: none;
+      color: #fff;
+      font-size: 1.1em;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #89c7ff;
+      transform: scale(1.05);
+    }
+
+    .mensaje {
+      margin-top: 25px;
+      font-size: 1.1em;
+      color: #5a5a5a;
+      max-width: 350px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .mensaje.mostrar {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <img src="https://static.wikia.nocookie.net/sanrio/images/7/7e/Cinnamoroll_Transparent.png" alt="Cinnamoroll">
+  <h1>Feliz mes, Liz 💙</h1>
+  <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
+  <p id="mensaje" class="mensaje">Si Cinnamoroll tuviera suerte, te tendría como yo te tengo a ti, Liz 💙 Gracias por ser mi razón de sonreír cada día.</p>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById("mensaje");
+      mensaje.classList.add("mostrar");
+    }
+  </script>
+</body>
+</html>
