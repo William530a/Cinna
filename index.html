@@ -147,19 +147,26 @@ Liz, gracias por ser tú, por existir, por ser esa personita increíble que me i
 Te amo mi niña hermosa!
   </p>
 
+  <audio id="musica" src="musica.mp3" loop></audio>
+
   <script>
     const btn = document.getElementById("btn");
     const mensaje = document.getElementById("mensaje");
+    const musica = document.getElementById("musica");
   
     btn.addEventListener("click", () => {
       mensaje.style.display = "block";
       setTimeout(() => {
         mensaje.style.opacity = "1";
-        mensaje.scrollIntoView({ behavior: "smooth" }); // ✨ baja suavemente hasta el texto
+        mensaje.scrollIntoView({ behavior: "smooth" });
       }, 100);
       btn.style.display = "none";
+  
+      // 🎶 Reproducir música al hacer clic
+      musica.play();
     });
   </script>
+
 
 
 </body>
