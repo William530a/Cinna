@@ -90,6 +90,47 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* ✨ Animaciones suaves para las Cinnas laterales */
+    .cinna-left {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 150px;
+      opacity: 0.9;
+      animation: gentleFloatLeft 4s ease-in-out infinite;
+    }
+    
+    .cinna-right {
+      position: absolute;
+      bottom: 40px;
+      right: 20px;
+      width: 160px;
+      opacity: 0.9;
+      animation: gentleFloatRight 4s ease-in-out infinite;
+    }
+    
+    /* 💫 Animación para la izquierda */
+    @keyframes gentleFloatLeft {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(2deg);
+      }
+    }
+    
+    /* 💫 Animación para la derecha (mantiene el flip horizontal) */
+    @keyframes gentleFloatRight {
+      0%, 100% {
+        transform: scaleX(-1) translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: scaleX(-1) translateY(-10px) rotate(-2deg);
+      }
+    }
+
+    
   </style>
 </head>
 <body>
