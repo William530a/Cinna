@@ -129,19 +129,20 @@
   <button id="btn">Haz clic aquí 💌</button>
 
   <!-- Mensaje oculto -->
-  <p id="mensaje" style="display: none;">
-    Si la Cinnamoroll tuviera suerte, te tendría como yo te tengo a ti, mi vida 💙  
-    
-    Desde que llegaste a mi vida, todo se volvió mucho más bonito. Los días normales empezaron a tener algo especial, una razón para sonreír sin motivo y una paz que solo tú sabes dar. No sé si alguna vez te lo he dicho con las palabras correctas, pero te has convertido en alguien muy importante para mí.
-    (Demasiado :,3) Me encanta la forma en que me alegras el dia, cómo puedes iluminar hasta los momentos más grises con solo ser tú. Eres esa combinación perfecta entre ternura y conviccion, entre risas sinceras y silencios que abrazan.
-    Gracias por cada instante, por cada mensaje, por cada palabra bonita y también por los silencios compartidos. Gracias por estar, por quedarte, por hacerme sentir que no hay lugar más bonito que a tu lado, aunque sea a través de una pantalla.
-    
-    A veces pienso que el destino se tomó su tiempo para cruzarnos, y me alegra que lo haya hecho. Porque contigo aprendí que las cosas más simples pueden ser las más valiosas: un “buenos días”, una sonrisa, una mirada, una conversación cualquiera.
-    Si pudiera pedir un deseo, sería seguir construyendo contigo recuerdos como este, pequeños pero llenos de cariño. Que no falten las risas, los buenos deseos, ni los días en los que simplemente nos quedemos hablando de todo y de nada.
-    
-    Liz, gracias por ser tú, por existir, por ser esa personita increíble que me inspira cada día. Te mereces todo lo bonito del mundo, y si puedo hacer aunque sea una parte de eso, ya soy feliz
+    <!-- Mensaje oculto -->
+  <p id="mensaje" style="display: none; white-space: pre-line; opacity: 0; transition: opacity 2s ease; font-size: 1.1rem; color: #555; width: 80%; max-width: 600px; margin-top: 25px;">
+Si la Cinnamoroll tuviera suerte, te tendría como yo te tengo a ti, mi vida 💙  
 
-    Te amo mi niña hermosa!
+Desde que llegaste a mi vida, todo se volvió mucho más bonito. Los días normales empezaron a tener algo especial, una razón para sonreír sin motivo y una paz que solo tú sabes dar. No sé si alguna vez te lo he dicho con las palabras correctas, pero te has convertido en alguien muy importante para mí.
+(Demasiado :,3) Me encanta la forma en que me alegras el día, cómo puedes iluminar hasta los momentos más grises con solo ser tú. Eres esa combinación perfecta entre ternura y convicción, entre risas sinceras y silencios que abrazan.
+Gracias por cada instante, por cada mensaje, por cada palabra bonita y también por los silencios compartidos. Gracias por estar, por quedarte, por hacerme sentir que no hay lugar más bonito que a tu lado, aunque sea a través de una pantalla.
+
+A veces pienso que el destino se tomó su tiempo para cruzarnos, y me alegra que lo haya hecho. Porque contigo aprendí que las cosas más simples pueden ser las más valiosas: un “buenos días”, una sonrisa, una mirada, una conversación cualquiera.
+Si pudiera pedir un deseo, sería seguir construyendo contigo recuerdos como este, pequeños pero llenos de cariño. Que no falten las risas, los buenos deseos, ni los días en los que simplemente nos quedemos hablando de todo y de nada.
+
+Liz, gracias por ser tú, por existir, por ser esa personita increíble que me inspira cada día. Te mereces todo lo bonito del mundo, y si puedo hacer aunque sea una parte de eso, ya soy feliz 💙
+
+Te amo mi niña hermosa!
   </p>
 
   <script>
@@ -150,8 +151,12 @@
 
     btn.addEventListener("click", () => {
       mensaje.style.display = "block";
+      setTimeout(() => {
+        mensaje.style.opacity = "1";
+      }, 50);
       btn.style.display = "none";
     });
   </script>
+
 </body>
 </html>
